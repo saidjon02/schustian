@@ -36,7 +36,7 @@ function Home() {
       <Helmet>
         <title>S.Chustian</title>
         <meta name="description" content="S.Chustian - Sayohatlar, yangi ishlar. Turli joylar va foydali maslahatlar. Biz bilan sayohat qiling va o'zgarishlarni kuzating!" />
-        <link rel="canonical" href="https://schustian.netlify.app" />
+        <link rel="canonical" href="https://schustian.netlify.app/" />
       </Helmet>
       <div className="home container">
         <div className="home-box">
