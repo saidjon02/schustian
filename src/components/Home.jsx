@@ -64,8 +64,6 @@ function Home() {
               />
             </span>
           </p>
-          <Link to={'https://www.youtube.com/@S.Chustian'}></Link>
-          <Link to={'https://t.me/sayfullachustiy'}></Link>
           <p className="home-text">
             I work as a truck driver at{' '}
             <Link className="orange" to={'https://www.bttransport.it/en/index.html'}>
