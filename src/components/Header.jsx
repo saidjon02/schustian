@@ -14,7 +14,14 @@ function Header() {
       <div className="container">
         <div className="head-row">
           <div className="head-box dfhead">
-            <img className="logo" onClick={handleSubscribe} src={logo} alt="" />
+            <img
+              width="auto"
+              height="auto"
+              className="logo"
+              onClick={handleSubscribe}
+              src={logo}
+              alt=""
+            />
             <i class={pop ? 'bx bx-x' : 'bx bx-menu'} onClick={() => setPop(!pop)}></i>
           </div>
           <div className="head-box2">

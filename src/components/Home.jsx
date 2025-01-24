@@ -31,11 +31,30 @@ function Home() {
     window.location.href =
       'https://www.youtube.com/channel/UCiCcA49h_8ahephOQfxldhA?sub_confirmation=1';
   };
+
   return (
     <div className="wrap">
       <Helmet>
-        <title>S.Chustian</title>
-        <meta name="description" content="S.Chustian - Travel, new things. Different places and useful tips. Travel with us and watch the changes!" />
+        <title>S.Chustian - Sayohat va Yangi Kashfiyotlar</title>
+        <meta
+          name="description"
+          content="S.Chustian - Travels, new opportunities. Various places and useful tips. Travel with us and witness the changes!"
+        />
+        <meta property="og:title" content="S.Chustian - Sayohat va Yangi Kashfiyotlar" />
+        <meta
+          property="og:description"
+          content="S.Chustian - Travels, new opportunities. Various places and useful tips. Travel with us and witness the changes!"
+        />
+        <meta property="og:image" content="../../Imgs/the-logo.png" />
+        <meta property="og:url" content="https://schustian.netlify.app/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="S.Chustian - Sayohat va Yangi Kashfiyotlar" />
+        <meta
+          name="twitter:description"
+          content="S.Chustian - Travels, new opportunities. Various places and useful tips. Travel with us and witness the changes!"
+        />
+        <meta name="twitter:image" content="../../Imgs/the-logo.png" />
         <link rel="canonical" href="https://schustian.netlify.app/" />
       </Helmet>
       <div className="home container">
@@ -90,28 +109,28 @@ function Home() {
             aria-label="My Favorite Images"
           >
             <SplideSlide>
-              <img src={img1} className="home-img" alt="" />
+              <img width="auto" height="auto" src={img1} className="home-img" alt="" />
             </SplideSlide>
             <SplideSlide>
-              <img src={img2} className="home-img" alt="" />
+              <img width="auto" height="auto" src={img2} className="home-img" alt="" />
             </SplideSlide>
             <SplideSlide>
-              <img src={img3} className="home-img" alt="" />
+              <img width="auto" height="auto" src={img3} className="home-img" alt="" />
             </SplideSlide>
             <SplideSlide>
-              <img src={img4} className="home-img" alt="" />
+              <img width="auto" height="auto" src={img4} className="home-img" alt="" />
             </SplideSlide>
             <SplideSlide>
-              <img src={img5} className="home-img" alt="" />
+              <img width="auto" height="auto" src={img5} className="home-img" alt="" />
             </SplideSlide>
             <SplideSlide>
-              <img src={img6} className="home-img" alt="" />
+              <img width="auto" height="auto" src={img6} className="home-img" alt="" />
             </SplideSlide>
             <SplideSlide>
-              <img src={img7} className="home-img" alt="" />
+              <img width="auto" height="auto" src={img7} className="home-img" alt="" />
             </SplideSlide>
             <SplideSlide>
-              <img src={img8} className="home-img" alt="" />
+              <img width="auto" height="auto" src={img8} className="home-img" alt="" />
             </SplideSlide>
           </Splide>
         </div>
@@ -119,7 +138,7 @@ function Home() {
       <div className="about container">
         <div className="about-row">
           <div className="a-cards">
-            <img src={travel} alt="" className="a-card-img" />
+            <img width="auto" height="auto" src={travel} alt="" className="a-card-img" />
             <h2 className="a-card-title">Traveling</h2>
             <p className="a-card-text">
               I love traveling the world and capturing unique places on camera. I always discover
@@ -127,7 +146,7 @@ function Home() {
             </p>
           </div>
           <div className="a-cards">
-            <img src={add} alt="" className="a-card-img" />
+            <img width="auto" height="auto" src={add} alt="" className="a-card-img" />
             <h2 className="a-card-title">Advertising on YouTube</h2>
             <p className="a-card-text">
               I create unique ways to place my clients' ads on the YouTube platform. I ensure high
@@ -136,7 +155,7 @@ function Home() {
             </p>
           </div>
           <div className="a-cards">
-            <img src={work} alt="" className="a-card-img" />
+            <img width="auto" height="auto" src={work} alt="" className="a-card-img" />
             <h2 className="a-card-title">Different jobs</h2>
             <p className="a-card-text">
               I work in a variety of fields, including BT Transport Services. Our services provide
@@ -159,15 +178,12 @@ function Home() {
             breakpoints: {
               660: {
                 perPage: 1,
-          
               },
               1067: {
                 perPage: 2,
-            
               },
               1104: {
                 perPage: 3,
-               
               },
             },
           }}
@@ -175,7 +191,7 @@ function Home() {
         >
           <SplideSlide>
             <div className="com-card">
-              <img src={img9} alt="" className="c-img" />
+              <img width="auto" height="auto" src={img9} alt="" className="c-img" />
               <h2 className="c-title">Ethan Davis</h2>
               <p className="c-text">
                 I really like your YouTube videos. They are interesting. I really like your style,
@@ -185,7 +201,7 @@ function Home() {
           </SplideSlide>
           <SplideSlide>
             <div className="com-card">
-              <img src={img10} alt="" className="c-img" />
+              <img width="auto" height="auto" src={img10} alt="" className="c-img" />
               <h2 className="c-title">Oliver Reed</h2>
               <p className="c-text">
                 Your content has always been interesting and helpful. I have learned a lot from you.
@@ -195,7 +211,7 @@ function Home() {
           </SplideSlide>
           <SplideSlide>
             <div className="com-card">
-              <img src={img11} alt="" className="c-img" />
+              <img width="auto" height="auto" src={img11} alt="" className="c-img" />
               <h2 className="c-title">Liam James</h2>
               <p className="c-text">
                 I've been very inspired by your videos. Keep creating such useful and quality
