@@ -35,13 +35,13 @@ function Home() {
     <div className="wrap">
       <Helmet>
         <title>S.Chustian</title>
-        <meta name="description" content="S.Chustian - Sayohatlar, yangi ishlar. Turli joylar va foydali maslahatlar. Biz bilan sayohat qiling va o'zgarishlarni kuzating!" />
+        <meta name="description" content="S.Chustian - Travel, new things. Different places and useful tips. Travel with us and watch the changes!" />
         <link rel="canonical" href="https://schustian.netlify.app/" />
       </Helmet>
       <div className="home container">
         <div className="home-box">
           <h1 className="home-title">Hello! My Name is Sayfulla</h1>
-          <p className="home-subtitle">
+          <p className="home-subtitle notranslate">
             <span>I'm a </span>
             <span>
               <Typewriter
