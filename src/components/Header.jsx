@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../../Imgs/Group 1 (1).png';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import 'boxicons';
 function Header() {
   const handleSubscribe = () => {
