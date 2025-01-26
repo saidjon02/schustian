@@ -8,8 +8,6 @@ import Notfound from './components/Notfound';
 
 function App() {
   const location = useLocation();
-
-  // Har qanday noto'g'ri yo'lda Header va Footerni yashirish
   const isNotFound = location.pathname !== '/';
 
   return (
