@@ -32,15 +32,50 @@ function Home() {
       'https://www.youtube.com/channel/UCiCcA49h_8ahephOQfxldhA?sub_confirmation=1';
   };
 
+  const [formData, setFormData] = useState({
+    name: '',
+    surname: '',
+    email: '',
+    text: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('https://ac8d73010fc49ec5.mokky.dev/item', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: Date.now(), ...formData }),
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', surname: '', email: '', text: '' }); // Tozalash
+      } else {
+        alert('Failed to send the message.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred.');
+    }
+  };
   return (
     <div className="wrap">
       <Helmet>
-        <title>S.Chustian - Sayohat va Yangi Kashfiyotlar</title>
+        <title>S.Chustian - Travel and New Discoveries</title>
         <meta
           name="description"
           content="S.Chustian - Travels, new opportunities. Various places and useful tips. Travel with us and witness the changes!"
         />
-        <meta property="og:title" content="S.Chustian - Sayohat va Yangi Kashfiyotlar" />
+        <meta property="og:title" content="S.Chustian - Travel and New Discoveries" />
         <meta
           property="og:description"
           content="S.Chustian - Travels, new opportunities. Various places and useful tips. Travel with us and witness the changes!"
@@ -49,7 +84,7 @@ function Home() {
         <meta property="og:url" content="https://schustian.netlify.app/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="S.Chustian - Sayohat va Yangi Kashfiyotlar" />
+        <meta name="twitter:title" content="S.Chustian - Travel and New Discoveries" />
         <meta
           name="twitter:description"
           content="S.Chustian - Travels, new opportunities. Various places and useful tips. Travel with us and witness the changes!"
@@ -222,44 +257,68 @@ function Home() {
         </Splide>
       </div>
       <div className="contact">
-        <div className="container">
-          <div className="cont-row">
-            <div className="cont-box1">
-              {' '}
-              <h2 className="cont-title">Contact me</h2>
-              <p className="cont-text">
-                If you have any questions or suggestions, feel free to contact me. I will be happy
-                to answer all your questions.
-              </p>
-              <form className="cont-form">
-                <input type="text" placeholder="Your Name" className="cont-input" />
-                <input type="text" placeholder="Your Surname" className="cont-input" />
-                <input type="email" placeholder="Email" className="cont-input" />
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="10"
-                  placeholder="Message"
-                  className="cont-input"
-                ></textarea>
-                <button className="cont-btn">Send Message</button>
-              </form>
-            </div>
-            <div className="cont-box">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1353.5836723850755!2d19.11953501636629!3d48.57903525299837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471538290a943cb9%3A0xbb1447026e9cc22d!2sBT%20Transport%20Ltd.!5e1!3m2!1sen!2s!4v1737651525503!5m2!1sen!2s"
-                className="map"
-                width="600"
-                height="450"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+      <div className="container">
+        <div className="cont-row">
+          <div className="cont-box1">
+            <h2 className="cont-title">Contact me</h2>
+            <p className="cont-text">
+              If you have any questions or suggestions, feel free to contact me. I will be happy to
+              answer all your questions.
+            </p>
+            <form className="cont-form" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="cont-input"
+                value={formData.name}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="surname"
+                placeholder="Your Surname"
+                className="cont-input"
+                value={formData.surname}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                className="cont-input"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <textarea
+                name="text"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Message"
+                className="cont-input"
+                value={formData.text}
+                onChange={handleChange}
+              ></textarea>
+              <button className="cont-btn" type="submit">
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div className="cont-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1353.5836723850755!2d19.11953501636629!3d48.57903525299837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471538290a943cb9%3A0xbb1447026e9cc22d!2sBT%20Transport%20Ltd.!5e1!3m2!1sen!2s!4v1737651525503!5m2!1sen!2s"
+              className="map"
+              width="600"
+              height="450"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

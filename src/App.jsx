@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import Notfound from './components/Notfound';
+import Message from './components/Message';
 
 function App() {
   const location = useLocation();
@@ -15,6 +16,7 @@ function App() {
       {!isNotFound && <Header />}
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/messege12321" element={<Message />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
       {!isNotFound && <Footer />}

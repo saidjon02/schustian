@@ -244,7 +244,8 @@ h6 {
   border: none;
   margin-top: 30px;
 }
-.bx-menu, .bx-x {
+.bx-menu,
+.bx-x {
   display: none !important;
 }
 .footer {
@@ -265,13 +266,12 @@ h6 {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #B7DFFF;
+  background-color: #b7dfff;
   padding: 80px 50px;
 }
 .not-title {
   font-size: 54px;
   text-align: center;
-  
 }
 .not-img {
   margin-top: 60px;
@@ -297,6 +297,63 @@ h6 {
 .not-btn:hover {
   background-color: transparent;
   color: rgb(0, 55, 121);
+}
+
+/* Message */
+
+.message {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.m-box {
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 4px 4px 50px #cdcdcd;
+}
+.m-title {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.m-text::first-letter {
+  text-transform: uppercase;
+}
+.message hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.m-b-row * {
+  display: inline;
+}
+.m-b-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.m-img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+.m-h4 {
+}
+.bxs-message-x {
+  font-size: 40px;
+  color: red;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.back-to-home .not-link {
+}
+.back-to-home .not-btn {
+  position: fixed;
+  bottom: 20px;
+  z-index: 999999999999999999999;
+  right: 50px;
+  left: 50px;
 }
 @media only screen and (max-width: 1400px) {
   .container {
@@ -438,10 +495,31 @@ h6 {
   }
 }
 @media only screen and (max-width: 576px) {
+  .m-box {
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .m-title {
+    font-size: 22px;
+  }
+  .m-text {
+    font-size: 15px;
+  }
+  .m-img {
+    display: none;
+  }
+  .message {
+    margin-top: 27px;
+  }
+  .message .not-btn{
+    left: 20px;
+    right: 20px;
+  }
   .container {
     padding: 0 15px;
   }
-  .bx-menu, .bx-x {
+  .bx-menu,
+  .bx-x {
     display: inline !important;
   }
   .logo {
@@ -521,7 +599,7 @@ h6 {
   .comments .splide {
     padding: 0 !important;
   }
-  .home .splide{
+  .home .splide {
     padding: 30px;
   }
   .cont-box1 {
