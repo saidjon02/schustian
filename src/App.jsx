@@ -16,7 +16,7 @@ function App() {
       {!isNotFound && <Header />}
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/messege12321" element={<Message />} />
+        <Route exact path="/message12321" element={<Message />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
       {!isNotFound && <Footer />}
